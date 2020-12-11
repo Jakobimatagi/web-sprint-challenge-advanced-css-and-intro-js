@@ -246,13 +246,13 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 function get20s(array){
   let filtered = [];
   for (let i = 0; i < array.length; i++){
-    if ((array[i]["years"].split("-") >= "1900") && (array[i]["years"].split("-")[2] <= "2000")){
-     filtered.push(array["name"])
-    } 
-    return filtered;
+    if((array[i]["years"].split(" ")[0] >= 1900) && (array[i]["years"].split(" ")[2] < 2000)){
+     filtered.push(array[i].name)
+    }   
   }
+  return filtered;
 }
-console.log('test', get20s(artists));
+console.log(get20s(artists), "dog");
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
  Use removeArtist to do the following:
@@ -306,8 +306,8 @@ function lotsOfArt(array){
    if(array[i]["paintings"] > 100){
      hunnidUp.push(array[i]["name"])
    }
-   return hunnidUp;
   }
+  return hunnidUp;
 }
   
  
